@@ -13,16 +13,17 @@ app.get("/", function(req, res) {
         response.on("data", function(data){
             const weatherData = JSON.parse(data)
             const temp = weatherData.main.temp
-            console.log(temp)
-
             const feelsLike = weatherData.weather[0].description;
-            console.log(feelsLike)
-
+            const image = weatherData.weather[0].icon;
+            const imageUrl = "https://openweathermap.org/img/wn/"+ image +"@2x.png";
+            
+            res.write("<h1>The temperature in Kyiv is " + temp + " degrees Celsius</h1>" );
+            res.write( "<p>The weather style currently " + feelsLike + "<p>");
+            res.write("<img src =" + imageUrl + ">");
+            res.send();
         })
 
     })
-    
-    res.send("")
 })
 
 
