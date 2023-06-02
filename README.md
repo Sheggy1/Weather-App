@@ -1,4 +1,6 @@
-# Weather-App
+# Weather-App 
+created with real-live server API response
+
 Do not forget about adding API key.
 
 ![Screenshot_6](https://github.com/Sheggy1/Weather-App/assets/43640476/03bccec5-f2f0-4da6-8cfa-b39d190cc0e6)
